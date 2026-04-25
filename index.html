@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Андрей Конов | Видеограф</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --accent: #00ff9d;
+      --text: #eeeeee;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.55);
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.4), rgba(10,10,10,0.95));
+      z-index: -1;
+    }
+    .name { font-size: 5rem; font-weight: 700; margin-bottom: 10px; }
+    .profession { font-size: 2.4rem; color: var(--accent); margin-bottom: 60px; }
+    .portfolio-title { font-size: 6rem; font-weight: 900; letter-spacing: -5px; color: white; text-transform: uppercase; margin-bottom: 50px; }
+    .btn {
+      padding: 18px 55px;
+      font-size: 1.4rem;
+      background: transparent;
+      color: var(--accent);
+      border: 3px solid var(--accent);
+      cursor: pointer;
+      transition: all 0.4s;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+    }
+    .btn:hover { background: var(--accent); color: #000; transform: scale(1.05); }
+
+    section { padding: 100px 8%; }
+    h2 { text-align: center; font-size: 3.2rem; margin-bottom: 70px; color: var(--accent); }
+
+    .category { margin-bottom: 120px; }
+    .category h3 {
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+      text-align: center;
+      color: var(--accent);
+    }
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 25px;
+    }
+    .link-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 30px 25px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .link-card:hover {
+      background: #222;
+      transform: translateY(-8px);
+    }
+    .link-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: block;
+      margin: 15px 0;
+    }
+    .link-card a:hover { text-decoration: underline; }
+    .link-card p { color: #aaa; font-size: 1.05rem; }
+
+    footer {
+      text-align: center;
+      padding: 80px 20px;
+      background: #050505;
+      color: #777;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 25px 8%;
+      background: rgba(10,10,10,0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>Андрей Конов — Видеограф</nav>
+
+  <header>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="https://assets.mixkit.co/videos/preview/12345/12345-large.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div>
+      <div class="name">Андрей Конов</div>
+      <div class="profession">Видеограф</div>
+      <div class="portfolio-title">Портфолио</div>
+      <a href="#weddings" class="btn">Смотреть работы</a>
+    </div>
+  </header>
+
+  <!-- Свадьбы -->
+  <section id="weddings">
+    <h2>Свадьбы</h2>
+    <div class="videos">
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/K0pN7YgbRcYIGQ" target="_blank">Смотреть видео →</a>
+        <p>Свадьба 1</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/yb2KWWGW5UNdQg" target="_blank">Смотреть видео →</a>
+        <p>Свадьба 2</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/r5j1iCX_8YXIAw" target="_blank">Смотреть видео →</a>
+        <p>Свадьба 3</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/iDT_ydQObBZLBg" target="_blank">Смотреть видео →</a>
+        <p>Свадьба 4</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/z-Qb_UiFA2BqaA" target="_blank">Смотреть видео →</a>
+        <p>Свадьба 5</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Рилс -->
+  <section id="reels" style="background:#111;">
+    <h2>Рилс</h2>
+    <div class="videos">
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/wXI5neBuA7j3Gw" target="_blank">Смотреть рилс →</a>
+        <p>Рилс 1</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/teKMOn5GINPMfA" target="_blank">Смотреть рилс →</a>
+        <p>Рилс 2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отчётные видео -->
+  <section id="reports">
+    <h2>Отчётные видео</h2>
+    <div class="videos">
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/Kr6cYcdVV22B7A" target="_blank">Смотреть видео →</a>
+        <p>Отчёт 1</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/blAIF473DSI9jA" target="_blank">Смотреть видео →</a>
+        <p>Отчёт 2</p>
+      </div>
+      <div class="link-card">
+        <a href="https://disk.yandex.ru/i/pemqQw9rBrWaaQ" target="_blank">Смотреть видео →</a>
+        <p>Отчёт 3</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Андрей Конов © 2026 • Видеограф</p>
+    <p>Для сотрудничества: [укажи свой телефон или email]</p>
+  </footer>
+
+</body>
+</html>
